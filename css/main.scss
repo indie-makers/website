@@ -7,6 +7,8 @@
 $blue: #7fc6bc;
 $white: #fff;
 $black: #0D2339;
+$shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+$gradient: linear-gradient(180deg, rgba(127,198,188,1) 0%, rgba(75,181,193,1) 100%);
 
 body {
   font-family: 'Lato', sans-serif;
@@ -14,9 +16,12 @@ body {
   font-size: 18px;
   color: $white;
   background: $blue;
-  background: linear-gradient(180deg, rgba(127,198,188,1) 0%, rgba(75,181,193,1) 100%);
+  background: $gradient;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
@@ -29,11 +34,29 @@ a {
   &:hover { color: $black; }
 }
 
+h1 {
+  font-weight: 300;
+  font-size: 1.67em;
+  margin-bottom: 30px;
+
+  &:after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    border-radius: 2px;
+    display: block;
+    background-color: $white;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 60%;
+  width: 60%;
+  max-width: 80%;
   margin: auto;
 
   &__secondary {
@@ -48,6 +71,7 @@ a {
 
   &__intro {
     margin-top: 30px;
+    margin-bottom: 100px;
     font-size: 1.78em;
     font-weight: 300;
     max-width: 21.33em;
@@ -56,5 +80,62 @@ a {
 }
 
 .event {
+  background-color: $white;
+  border-radius: 4px;
+  width: 800px;
+  max-width: 80%;
+  box-shadow: $shadow;
+  color: $black;
+  padding: 40px;
 
+  &__header {
+    display: flex;
+    font-size: 2.22em;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &__title {
+      font-weight: 300;
+      margin: 0;
+
+      div {
+        font-size: 0.38em;
+      }
+    }
+
+    &__date {
+      font-weight: 700;
+
+      div { font-size: 0.5em; }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__location {
+      div {
+        font-weight: 700;
+        font-size: 1.2em;
+      }
+    }
+
+    &__cta {
+      border: solid $black 1px;
+      border-radius: 4px;
+      color: $black;
+      padding: 20px 50px;
+      cursor: pointer;
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
 }
