@@ -1,0 +1,60 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import 'normalize.scss';
+
+$blue: #7fc6bc;
+$white: #fff;
+$black: #0D2339;
+
+body {
+  font-family: 'Lato', sans-serif;
+  padding: 40px 0;
+  font-size: 18px;
+  color: $white;
+  background: $blue;
+  background: linear-gradient(180deg, rgba(127,198,188,1) 0%, rgba(75,181,193,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a {
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-decoration: none;
+
+  &:hover { color: $black; }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: auto;
+
+  &__secondary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    margin-top: 100px;
+  }
+
+  &__intro {
+    margin-top: 30px;
+    font-size: 1.78em;
+    font-weight: 300;
+    max-width: 21.33em;
+    text-align: center;
+  }
+}
+
+.event {
+
+}

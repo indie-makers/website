@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+
+  <title>
+      {% if page.title %} {{ page.title }} &raquo; {% endif %} {{ site.title }}
+  </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+</head>
+<body>
+    <header class="header">
+      <div class="header__secondary">
+        <div>An <a href="https://www.indiehackers.com/">Indie Hackers</a> Meetup</div>
+        <a href="#"> Subscribe </a>
+      </div>
+
+      <div class="logo">
+        <img src="{{ "/images/logo.svg" | prepend: site.baseurl }}" alt="">
+      </div>
+
+      <div class="header__intro">
+        A monthly meetup for the Indie Hackers
+        community in Prague.
+      </div>
+    </header>
+
+    <div class="event">
+      <div class="event__header">
+        <h1 class="event__header_title">
+          <div>MEET & GREET</div>
+          <div>27 April @ 6PM - 9PM</div>
+        </h1>
+        <div class="event__header_date">
+          27
+          <span>APR</span>
+        </div>
+      </div>
+
+      <div class="event__info">
+        <div class="event__info__location">
+          Node5
+          <span>
+            Radlicka 50, 15000 Prague, Czech Republic.
+          </span>
+        </div>
+
+        <a class="event__info__cta">
+          JOIN US
+        </a>
+      </div>
+    </div>
+
+</body>
+</html>
