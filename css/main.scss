@@ -5,6 +5,7 @@
 @import 'normalize.scss';
 
 $blue: #7fc6bc;
+$darkBlue: #59747C;
 $white: #fff;
 $black: #0D2339;
 $shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
@@ -12,7 +13,7 @@ $gradient: linear-gradient(180deg, rgba(127,198,188,1) 0%, rgba(75,181,193,1) 10
 
 body {
   font-family: 'Lato', sans-serif;
-  padding: 40px 0;
+  padding-top: 40px;
   font-size: 18px;
   color: $white;
   background: $blue;
@@ -34,9 +35,21 @@ a {
   &:hover { color: $black; }
 }
 
-h1 {
+h1, h2 {
   font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
   font-size: 1.67em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+
+.under {
   margin-bottom: 30px;
 
   &:after {
@@ -137,5 +150,127 @@ h1 {
         color: $white;
       }
     }
+  }
+}
+
+.hosts {
+  margin-top: 20px;
+}
+
+.host {
+
+  &:nth-of-type(odd) {
+    margin-left: 100px;
+  }
+
+  &:nth-of-type(even) {
+    margin-right: 100px;
+  }
+
+  display: flex;
+  background-color: $white;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  color: $black;
+  margin-bottom: 30px;
+  justify-content: space-between;
+
+  img {
+    width: 60px;
+  }
+
+  span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding: 0 20px;
+  }
+
+  a {
+    color: $black;
+    font-weight: 300;
+    padding:0 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.hosts,
+.events {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.events {
+  margin-top: 80px;
+}
+
+.subscription {
+  background-color: $white;
+  margin-top: 150px;
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    font-size: 1.8em !important;
+    color: $darkBlue;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    font-size: 1em !important;
+    margin: 20px 0;
+  }
+}
+
+
+#mc_embed_signup_scroll {
+  width: 800px;
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mc_embed_signup_scroll * {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  color: $darkBlue;
+}
+
+#mce-EMAIL {
+  border: solid $black 2px;
+  border-radius: 4px;
+  padding: 15px 10px;
+  display: block;
+  width: 100%;
+}
+
+#mc-embedded-subscribe {
+  border-radius: 4px;
+  padding: 20px 30px;
+  background-color: $black;
+  color: $white;
+  letter-spacing: 2px;
+  margin: auto;
+}
+
+.footer {
+  padding: 60px 0;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin-top: 30px;
+    width: 400px;
   }
 }

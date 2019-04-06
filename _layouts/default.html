@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | prepend: site.baseurl }}">
+  <link rel="manifest" href="{{ "/site.webmanifest" | prepend: site.baseurl }}">
+
   <title>
       {% if page.title %} {{ page.title }} &raquo; {% endif %} {{ site.title }}
   </title>
@@ -29,7 +34,7 @@
       </div>
     </header>
 
-    <h1>UPCOMMING MEETUP</h1>
+    <h1 class="under">UPCOMMING MEETUP</h1>
 
     <div class="event">
       <div class="event__header">
@@ -53,6 +58,60 @@
         </a>
       </div>
     </div>
+
+    <div class="hosts">
+      <h2>
+        Hosts
+      </h2>
+
+      <div class="host">
+        <img src="{{ "/images/motaqui.jpg" | prepend: site.baseurl }}" alt="">
+        <span>MOTAQUI MADDANE</span>
+        <a href="">contact</a>
+      </div>
+
+      <div class="host">
+        <a href="">contact</a>
+        <span>ALEX MARTYNOV</span>
+        <img src="{{ "/images/alex.jpg" | prepend: site.baseurl }}" alt="">
+      </div>
+    </div>
+
+    <div class="events">
+      <h1 class="under">
+        Past Meetups
+      </h1>
+
+      <div class="event">
+        <div class="event__header">
+          <h2 class="event__header__title">
+            MEET & GREET
+            <div>27 April @ 6PM - 9PM</div>
+          </h2>
+          <div class="event__header__date">
+            27
+            <div>APR</div>
+          </div>
+        </div>
+        <div class="event__info">
+          <div class="event__info__location">
+            <div>Node5</div>
+            Radlicka 50, 15000 Prague, Czech Republic.
+          </div>
+
+          <a class="event__info__cta" href="https://www.facebook.com/groups/2320354811623955/" target="_blank">
+            Link to IH
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {% include signup.html %}
+
+    <footer class="footer">
+      <div>A Meetup From</div>
+      <img src="{{ "/images/indie-hackers-logo__type--light.svg" | prepend: site.baseurl }}" alt="">
+    </footer>
 
 </body>
 </html>
