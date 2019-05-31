@@ -13,7 +13,7 @@
     {% assign isEven = forloop.index | modulo:2 %}
     {% if isEven == 0 %}
       <div class="host">
-        <a href="{{speaker.email}}?subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
+        <a href="mailto:{{speaker.email}}?subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
         <span>{{ speaker.fullname }}</span>
         <img src="{{ speaker.picture | prepend: site.baseurl }}" alt="">
       </div>
@@ -21,7 +21,7 @@
       <div class="host">
         <img src="{{ speaker.picture | prepend: site.baseurl }}" alt="">
         <span>{{ speaker.fullname }}</span>
-        <a href="{{speaker.email}}?subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
+        <a href="mailto:{{speaker.email}}?subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
       </div>
     {% endif %}
   {% endfor %}
