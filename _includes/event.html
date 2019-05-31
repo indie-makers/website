@@ -1,0 +1,23 @@
+<div class="event">
+  <div class="event__header">
+    <h2 class="event__header__title">
+      #{{ include.number }}: {{ include.event.title }}
+      <div>{{ include.event.date | date: "%a, %d %B %Y" }} @ {{ include.event.time }}</div>
+    </h2>
+    <div class="event__header__date">
+      {{ include.event.date | date: "%d" }}
+      <div>{{ include.event.date | date: "%b" }}</div>
+    </div>
+  </div>
+
+  <div class="event__info">
+    <div class="event__info__location">
+      <div>{{ include.event.location.name }}</div>
+      {{ include.event.location.address }}
+    </div>
+
+    <a class="event__info__cta" href="{{ include.event.fb }}" target="_blank">
+      Link to FB
+    </a>
+  </div>
+</div>

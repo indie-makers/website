@@ -11,3 +11,12 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /:collection/:name
+  speakers:
+    output: true
+    permalink: /:collection/:name

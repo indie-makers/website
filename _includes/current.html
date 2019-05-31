@@ -1,0 +1,28 @@
+<h1 class="under">UPCOMMING MEETUP</h1>
+
+{% assign current = site.events | reverse | first %}
+{% assign currentNumber = site.events | size %}
+{% include event.html number=currentNumber event=current %}
+
+<div class="hosts">
+  <h2>
+    Speakers
+  </h2>
+
+  {% for speaker in site.speakers %}
+    {% assign isEven = forloop.index | modulo:2 %}
+    {% if isEven == 0 %}
+      <div class="host">
+        <a href="{{speaker.email}}?subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
+        <span>{{ speaker.fullname }}</span>
+        <img src="{{ speaker.picture | prepend: site.baseurl }}" alt="">
+      </div>
+    {% else %}
+      <div class="host">
+        <img src="{{ speaker.picture | prepend: site.baseurl }}" alt="">
+        <span>{{ speaker.fullname }}</span>
+        <a href="{{speaker.email}}?subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

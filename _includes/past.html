@@ -1,0 +1,12 @@
+<div class="events">
+  <h1 class="under">
+    Past Meetups
+  </h1>
+
+  {% assign events = site.events | reverse %}
+  {% for event in events %}
+    {% if forloop.first != true %}
+      {% include event.html number=forloop.rindex event=event %}
+    {% endif %}
+  {% endfor %}
+</div>

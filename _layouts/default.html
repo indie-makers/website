@@ -34,84 +34,9 @@
       </div>
     </header>
 
-    <h1 class="under">UPCOMMING MEETUP</h1>
+    {% include current.html %}
 
-    <div class="event">
-      <div class="event__header">
-        <h2 class="event__header__title">
-          #2: UNDER THE HOOD
-          <div>Sat, 25 May @ 11:00 – 14:00</div>
-        </h2>
-        <div class="event__header__date">
-          25
-          <div>MAY</div>
-        </div>
-      </div>
-      <div class="event__info">
-        <div class="event__info__location">
-          <div>Coffee or Die</div>
-           Libická 1756/12, 130 00 Vinohrady
-        </div>
-
-        <a class="event__info__cta" href="https://www.facebook.com/events/2582234642003412/" target="_blank">
-          EVENT (FB)
-        </a>
-      </div>
-    </div>
-
-    <div class="hosts">
-      <h2>
-        Speakers
-      </h2>
-
-      <div class="host">
-        <img src="{{ "/images/motaqui.jpg" | prepend: site.baseurl }}" alt="">
-        <span>MOTAQUI MADDANE</span>
-        <a href="mailto:maddane.info@gmail.com?cc=alex@alexmartynov.com&subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
-      </div>
-
-      <div class="host">
-        <a href="mailto:alex@alexmartynov.com?cc=maddane.info@gmail.com&subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
-        <span>ALEX MARTYNOV</span>
-        <img src="{{ "/images/alex.jpg" | prepend: site.baseurl }}" alt="">
-      </div>
-
-
-      <div class="host">
-        <img src="{{ "/images/viktor.jpg" | prepend: site.baseurl }}" alt="">
-        <span>VIKTOR GOLIAŠ</span>
-        <a href="mailto:golias.viktor@gmail.com?cc=maddane.info@gmail.com,alex@alexmartynov.com&subject=Indie%20Makers%20%E2%80%93%20IH%20Meetup%3A" target="_blank">CONTACT</a>
-      </div>
-    </div>
-
-    <div class="events">
-      <h1 class="under">
-        Past Meetups
-      </h1>
-
-      <div class="event">
-        <div class="event__header">
-          <h2 class="event__header__title">
-            #1: MEET & GREET
-            <div>27 April @ 11:00 – 13:00</div>
-          </h2>
-          <div class="event__header__date">
-            27
-            <div>APR</div>
-          </div>
-        </div>
-        <div class="event__info">
-          <div class="event__info__location">
-            <div>MERCH OR DIE</div>
-            Libická 1756/12, 130 00 Vinohrady
-          </div>
-
-          <a class="event__info__cta" href="https://www.facebook.com/events/2155830861178145/" target="_blank">
-            Link to FB
-          </a>
-        </div>
-      </div>
-    </div>
+    {% include past.html %}
 
     {% include signup.html %}
 

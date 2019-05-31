@@ -205,6 +205,10 @@ h2 {
 
 .events {
   margin-top: 80px;
+
+  .event:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 .subscription {
